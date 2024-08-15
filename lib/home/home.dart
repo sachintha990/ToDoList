@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo_list/constants/constants.dart';
 import 'package:todo_list/constants/nav_bar.dart';
 import 'package:todo_list/home/add_task.dart';
+import 'package:todo_list/profile/profile.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -27,7 +28,10 @@ class _HomeState extends State<Home> {
         leading: IconButton(
             icon: Icon(Icons.sort, color: Colors.white),
             onPressed: () {
-              // Add your onPressed code here!
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Profile()),
+              );
             },
           ),
           title: const Align(
@@ -83,7 +87,7 @@ class _HomeState extends State<Home> {
         MaterialPageRoute(builder: (context) => AddTask()),);
             },
             child: Icon(Icons.add,size: 40,color: Colors.white,),
-            backgroundColor: Color(0xff8687E7),
+            backgroundColor:secondaryColor,
             shape: CircleBorder(),
             elevation: 10, 
           ),

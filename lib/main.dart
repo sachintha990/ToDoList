@@ -1,7 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_list/home/add_task.dart';
+import 'package:todo_list/home/home.dart';
+import 'package:todo_list/screen/authentication/authentication.dart';
 import 'package:todo_list/screen/wrapper.dart';
 import 'package:todo_list/services/auth.dart';
 import 'package:todo_list/services/models/userModel.dart';
@@ -23,8 +24,7 @@ class MyApp extends StatelessWidget {
       value: AuthServides().user,
       child: MaterialApp(
          debugShowCheckedModeBanner: false,
-         home: Wrapper(),
-        
+         home:Wrapper()
       
       ),
     );
